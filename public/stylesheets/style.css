@@ -1,0 +1,41 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*auth css*/
+.bg-auth {
+  background-color: #fafafa;
+  height: 675px;
+}
+
+.bg-auth .left-side {
+  align-self: center;
+  background-image: url(https://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/38825c9d5aa2.png);
+  background-position: 0 0;
+  background-size: 454px 618px;
+  -ms-flex-preferred-size: 454px;
+  flex-basis: 454px;
+  height: 618px;
+  margin-left: -35px;
+  margin-right: -15px;
+  margin-top: 30px;
+}
+
+.bg-auth .left-side .slider_img {
+  padding-left: 50px;
+  padding-left: 33.3333%;
+  padding-top: 24.5%;
+}
+
+.bg-auth .left-side .slider_img .this_list {
+  list-style: none;
+  padding: 0;
+}
+
+.bg-auth .left-side .slider_img .this_list li {
+  position: absolute;
+}
