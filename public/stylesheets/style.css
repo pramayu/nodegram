@@ -1,5 +1,5 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Roboto, "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -17,7 +17,7 @@ a {
 /*auth css*/
 .bg-auth {
   background-color: #fafafa;
-  height: 675px;
+  min-height: 675px;
 }
 
 .bg-auth .left-side {
@@ -75,6 +75,13 @@ a {
   color: #000;
 }
 
+.bg-auth .right-side .login-frm .title-inst .catip {
+  font-weight: 500;
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
 .bg-auth .right-side .login-frm ._this_mrg {
   margin-bottom: 10px;
 }
@@ -109,6 +116,13 @@ a {
   border-top: 1px solid #c7c7c7;
 }
 
+.bg-auth .right-side .login-frm .o-auth {
+  border-top: none;
+  margin-top: 0px;
+  border-bottom: 1px solid #c7c7c7;
+  margin-bottom: 20px;
+}
+
 .bg-auth .right-side .login-frm .omni-auth .or {
   position: absolute;
   margin-top: -13px;
@@ -125,6 +139,31 @@ a {
   padding: 20px 0px;
 }
 
+.bg-auth .right-side .login-frm .omni-auth .btw {
+  padding: 0px;
+  padding-bottom: 20px;
+}
+
+.bg-auth .right-side .login-frm .omni-auth .btw a {
+  background-color: #3897f0;
+  color: #fff !important;
+  font-weight: 500;
+  padding: 5px 12px;
+  outline: none;
+}
+
+.bg-auth .right-side .login-frm .term {
+  padding-top: 20px;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.bg-auth .right-side .login-frm .term p {
+  font-size: 13px;
+  line-height: 23px;
+  color: #999;
+}
 .bg-auth .right-side .login-frm .omni-auth .bti a {
   color: #00B7FF;
   text-decoration: none;
@@ -148,4 +187,29 @@ a {
 .bg-auth .right-side .sign_up_switch p span a {
   text-decoration: none;
   color: #00B7FF;
+  cursor: pointer;
+}
+
+._footer {
+  padding-top:80px;
+  padding-bottom: 30px;
+  background-color: #fafafa;
+}
+
+._footer .container .row .this_is_shit ul li {
+  margin-right: 10px;
+}
+
+._footer .container .row .this_is_shit ul li {
+  font-size: 12px;
+  font-weight: 500;
+  color:  #999;
+  text-decoration: none
+}
+
+._footer .container .row .this_is_shit ul li a {
+  font-size: 12px;
+  font-weight: 500;
+  color:  #00B7FF;
+  text-decoration: none;
 }
