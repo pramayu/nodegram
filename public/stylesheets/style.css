@@ -6,6 +6,14 @@ a {
   color: #00B7FF;
 }
 
+.clear {
+  clear: both;
+}
+
+.form-control {
+  font-family: Roboto, Helvetica, Arial;
+}
+
 /*auth css*/
 .bg-auth {
   background-color: #fafafa;
@@ -18,6 +26,7 @@ a {
   background-position: 0 0;
   background-size: 454px 618px;
   -ms-flex-preferred-size: 454px;
+  width: 47%;
   flex-basis: 454px;
   height: 618px;
   margin-left: -35px;
@@ -27,8 +36,8 @@ a {
 
 .bg-auth .left-side .slider_img {
   padding-left: 50px;
-  padding-left: 33.3333%;
-  padding-top: 24.5%;
+  padding-left: 32.85%;
+  padding-top: 24.05%;
 }
 
 .bg-auth .left-side .slider_img .this_list {
@@ -38,4 +47,105 @@ a {
 
 .bg-auth .left-side .slider_img .this_list li {
   position: absolute;
+}
+
+.bg-auth .right-side {
+  margin-top: 100px;
+  padding-right: 0px;
+  width: 38%;
+}
+
+.bg-auth .right-side .login-frm {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 40px;
+}
+
+.bg-auth .right-side .login-frm .title-inst {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.bg-auth .right-side .login-frm .title-inst h2 {
+  font-family: "Billabong";
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.bg-auth .right-side .login-frm ._this_mrg {
+  margin-bottom: 10px;
+}
+
+.bg-auth .right-side .login-frm .form-group .form-control {
+  box-shadow: none;
+  outline: none;
+  background: 0 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #262626;
+  font-size: 13px;
+  font-weight: 300;
+  height: 33px;
+}
+
+.bg-auth .right-side .login-frm .btn-login .tb {
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
+  outline: none;
+  font-family: Roboto, Helvetica, Arial;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 12px;
+}
+
+.bg-auth .right-side .login-frm .omni-auth {
+  margin-top: 30px;
+  text-align: center;
+  border-top: 1px solid #c7c7c7;
+}
+
+.bg-auth .right-side .login-frm .omni-auth .or {
+  position: absolute;
+  margin-top: -13px;
+  padding: 5px;
+  background-color: #fff;
+  left: 48%;
+  font-family: Roboto, Helvetica, Arial;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+}
+
+.bg-auth .right-side .login-frm .omni-auth .bti {
+  padding: 20px 0px;
+}
+
+.bg-auth .right-side .login-frm .omni-auth .bti a {
+  color: #00B7FF;
+  text-decoration: none;
+  font-family: Roboto, Helvetica, Arial;
+  font-size: 14px;
+}
+
+.bg-auth .right-side .sign_up_switch {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  padding: 20px 40px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.bg-auth .right-side .sign_up_switch p {
+  font-family: Roboto, Helvetica, Arial;
+  font-size: 14px;
+}
+
+.bg-auth .right-side .sign_up_switch p span a {
+  text-decoration: none;
+  color: #00B7FF;
 }
