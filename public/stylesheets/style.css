@@ -354,3 +354,113 @@ a {
   background-color: #fafafa;
   min-height: 600px;
 }
+.learning-quicker .munkf {
+  padding: 70px 9%;
+}
+
+.learning-quicker .munkf .edit-data {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #dbdbdb;
+  padding-left: 20px;
+}
+
+.learning-quicker .munkf .edit-data .left_ {
+  padding-top: 10px;
+}
+
+.learning-quicker .munkf .edit-data .left_ .list_itm {
+  list-style: none;
+  padding: 0px;
+}
+
+.learning-quicker .munkf .edit-data .left_ .list_itm li {
+  padding: 20px 0px;
+}
+
+.learning-quicker .munkf .edit-data .left_ .list_itm li a {
+  color: #262626;
+  font-size: 14px;
+  font-family: Roboto, Helvetica, Arial;
+  text-decoration: none;
+  font-weight: 400;
+}
+.learning-quicker .munkf .edit-data .left_ .list_itm li a.acti {
+  font-weight: 600;
+}
+
+.learning-quicker .munkf .edit-data .right_ {
+  padding-top: 15px;
+  border-left: 1px solid #dbdbdb;
+  padding-bottom: 20px;
+}
+
+.learning-quicker .munkf .edit-data .right_ .left_s {
+  text-align: right;
+}
+
+.learning-quicker .munkf .edit-data .right_ .left_s .left_info li .foo {
+  width: 50px;
+  border-radius: 100%;
+}
+.learning-quicker .munkf .edit-data .right_ .left_s .left_info li {
+  padding: 15px 0px;
+}
+.learning-quicker .munkf .edit-data .right_ .left_s .left_info li p{
+  color: #333;
+  font-size: 14px;
+  font-family: Roboto, Helvetica, Arial;
+  text-decoration: none;
+  font-weight: 600;
+}
+.learning-quicker .munkf .edit-data .right_ .left_s .left_info li p.fg{
+  margin-top: 45px;
+}
+.learning-quicker .munkf .edit-data .right_ .right_s {
+  padding-left: 50px;
+}
+
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li h4 {
+  font-family: Roboto, Helvetica, Arial;
+  margin-top: 25px;
+  font-weight: 500;
+}
+
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.fl {
+  margin-top: 43px;
+}
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.usr {
+  margin-top: 25px;
+}
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.web {
+  margin-top: 23px;
+}
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.bio,
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.mail,
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.phone,
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.gender {
+  margin-top: 23px;
+}
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li .form-control {
+  box-shadow: none;
+  outline: none;
+  font-size: 13px;
+  font-family: Roboto;
+  font-weight: 300;
+  color: #999;
+  border-radius: 2px;
+  border-color: #dbdbdb;
+}
+
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.bgth {
+  margin-top: 40px;
+}
+.learning-quicker .munkf .edit-data .right_ .right_s .right-form li.bgth .btn-f {
+  background-color: transparent;
+  border-color: #3897f0;
+  color: #3897f0;
+  outline: none;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Roboto;
+}

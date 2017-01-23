@@ -25,7 +25,7 @@ router.get('/login', function(req, res, next){
 });
 
 router.post('/login', passport.authenticate('local.login', {
-  successRedirect: '/users/profile',
+  successRedirect: '/',
   failureRedirect: '/users/login',
   failureFlash: true
 }));
@@ -36,12 +36,10 @@ router.get('/signup', function(req, res, next){
 });
 
 router.post('/signup', passport.authenticate('local.signup', {
-	successRedirect: '/users/profile',
+	successRedirect: '/',
 	failureRedirect: '/users/signup',
 	failureFlash: true
 }));
-
-
 
 
 module.exports = router;
@@ -50,7 +48,7 @@ function isLoggedIn(req, res, next){
   if(req.isAuthenticated()){
     return next();
   }
-  res.redirect('/');
+  res.redirect('/users/login');
 };
 
 function notLoggedIn(req, res, next){
