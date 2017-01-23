@@ -22,12 +22,12 @@
       </div>
         <p class="or">OR</p>
       </div>
-      <form class="lgn-form" action="#" method="post">
+      <form class="lgn-form" action="/users/signup" method="post">
         <div class="form-group _this_mrg">
           <input type="email" name="email" placeholder="Email" class="form-control">
         </div>
         <div class="form-group _this_mrg">
-          <input type="text" name="full_name" placeholder="Full Name" class="form-control">
+          <input type="text" name="fullname" placeholder="Full Name" class="form-control">
         </div>
         <div class="form-group _this_mrg">
           <input type="text" name="username" placeholder="Username" class="form-control">
@@ -37,6 +37,7 @@
         </div>
         <div class="btn-login">
           <button type="submit" class="btn tb btn-block">Sign up</button>
+          <input type="hidden" value="{{ csrfToken }}" name="_csrf">
         </div>
       </form>
       <div class="term">

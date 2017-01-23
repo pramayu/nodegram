@@ -5,12 +5,20 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var handleHbs = require('express-handlebars');
+var mongoose = require('mongoose');
+var session = require('express-session');
+var passport = require('passport');
+var flash  = require('connect-flash');
+var validator = require('express-validator');
 
 var auth = require('./routes/authentication');
 var index = require('./routes/index');
 
 var app = express();
 
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/nodegram');
+require('./config/passport');
 // view engine setup
 app.engine('.hbs', handleHbs({defaultLayout: 'layout', extname: '.hbs', layout: 'auth'}));
 app.set('view engine', '.hbs');
@@ -19,8 +27,17 @@ app.set('view engine', '.hbs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
+app.use(validator());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+	secret: '_this_is_secret',
+	resave: false,
+	saveUninitialized: false
+}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', auth);
