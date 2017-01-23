@@ -46,3 +46,32 @@ passport.use('local.signup', new LocalStrategy({
 		});
 	});
 }));
+
+passport.use('local.login', new LocalStrategy({
+  usernameField: 'username',
+  passwordField: 'password',
+  passReqToCallback: true
+}, function(req, username, password, done){
+  req.checkBody('username', 'Invalid Username').notEmpty();
+  req.checkBody('password', 'Wrong Password').notEmpty();
+  var errors = req.validationErrors();
+  if(errors){
+    messages = [];
+    errors.forEach(function(error){
+      messages.push(error.msg);
+    });
+    return done(null, false, req.flash('error', messages));
+  }
+  User.findOne({'username': username}, function(err, user){
+    if(err){
+      return done(err);
+    }
+    if(!user){
+      return done('null', false, {message: 'No user found'});
+    }
+    if(!user.validPassword(password)){
+      return done('null', false, {message: 'Wrong password'});
+    }
+    return done(null, user);
+  });
+}));

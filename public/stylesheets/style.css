@@ -213,3 +213,144 @@ a {
   color:  #00B7FF;
   text-decoration: none;
 }
+
+
+/*layout*/
+._this_nav {
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  height: 77px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+._this_nav .farewell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 1010px;
+  padding: 26px 40px;
+  width: 100%;
+}
+
+._this_nav .farewell .navbar-header {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 9999 0%;
+  flex: 1 9999 0%;
+  min-width: 40px;
+}
+
+._this_nav .farewell .navbar-header .logo_ {
+  background-image: url(https://instagramstatic-a.akamaihd.net/h1/sprites/core/e05e5e.png);
+  background-position: -177px 0;
+  height: 35px;
+  width: 176px;
+  margin: 0px;
+  margin-top: -5px;
+  outline: none;
+}
+
+._this_nav .farewell .navbar-search {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-width: 125px;
+}
+
+._this_nav .farewell .navbar-nav {
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0%;
+  flex: 1 0 0%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+._this_nav .farewell .navbar-nav li {
+  margin-left: 40px;
+}
+
+._this_nav .farewell .navbar-nav li a {
+  background-image: url(https://instagramstatic-a.akamaihd.net/h1/sprites/core/e05e5e.png);
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  padding: 0px;
+  padding-right: 11px !important;
+}
+
+._this_nav .farewell .navbar-nav li .btn-1 {
+  background-position: -302px -180px;
+}
+
+._this_nav .farewell .navbar-nav li .btn-2 {
+  background-position: -181px -229px;
+}
+
+._this_nav .farewell .navbar-nav li .btn-3 {
+  background-position: 0 -279px;
+}
+
+._this_nav .farewell .navbar-search .loop_ {
+  background-image: url(https://instagramstatic-a.akamaihd.net/h1/sprites/core/e05e5e.png);
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: -249px -115px;
+  position: absolute;
+  margin-left: 8px;
+  top: 35px;
+  z-index: 2;
+}
+
+._this_nav .farewell .navbar-search input {
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  font-size: 14px;
+  outline: none;
+  padding: 2px 10px 3px 26px;
+  z-index: 2;
+  background-color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: Roboto, Helvetica, Arial;
+  color: #999;
+  height: 28px;
+}
+
+.learning-quicker {
+  background-color: #fafafa;
+  min-height: 600px;
+}

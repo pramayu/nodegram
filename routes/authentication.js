@@ -6,9 +6,29 @@ var passport = require('passport');
 var csrfProtection = csrf();
 router.use(csrfProtection);
 
-router.get('/login', function(req, res, next){
-  res.render('auth/login', { layout: 'auth'});
+router.get('/profile', isLoggedIn, function(req, res, next){
+	res.render('./auth/profile');
 });
+
+router.get('/logout', isLoggedIn, function(req, res, next){
+  req.logout();
+  res.redirect('/users/login');
+});
+
+router.use('/users/login', notLoggedIn, function(req, res, next){
+  next();
+});
+
+router.get('/login', function(req, res, next){
+  var messages = req.flash('error');
+  res.render('auth/login', { layout: 'auth', csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
+});
+
+router.post('/login', passport.authenticate('local.login', {
+  successRedirect: '/users/profile',
+  failureRedirect: '/users/login',
+  failureFlash: true
+}));
 
 router.get('/signup', function(req, res, next){
 	var messages = req.flash('error');
@@ -21,9 +41,21 @@ router.post('/signup', passport.authenticate('local.signup', {
 	failureFlash: true
 }));
 
-router.get('/profile', function(req, res, next){
-	res.render('./auth/profile');
-});
+
 
 
 module.exports = router;
+
+function isLoggedIn(req, res, next){
+  if(req.isAuthenticated()){
+    return next();
+  }
+  res.redirect('/');
+};
+
+function notLoggedIn(req, res, next){
+  if(!req.isAuthenticated()){
+    return next();
+  }
+  res.redirect('/users/login');
+};
