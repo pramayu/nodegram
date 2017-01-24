@@ -33,12 +33,18 @@ app.use(cookieParser());
 app.use(session({
 	secret: '_this_is_secret',
 	resave: false,
-	saveUninitialized: false
+	saveUninitialized: false,
+  cookie: { maxAge: 180 * 60 *1000 }
 }));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function(req, res, next){
+  res.locals.current_user = req.user;
+  next();
+});
 
 app.use('/users', auth);
 app.use('/', index);

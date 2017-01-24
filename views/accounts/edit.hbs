@@ -12,7 +12,7 @@
   <div class="col-md-3 left_s">
     <ul class="left_info list-unstyled">
       {{# if user.profile}}
-      <li><img class="foo" src="" alt="" /></li>
+      <li><img class="foo" src="/uploads/profile/{{user.profile}}" alt="" /></li>
       {{else}}
       <li><img class="foo" src="/images/default/profile.png" alt="" /></li>
       {{/if}}
@@ -41,7 +41,7 @@
   </div>
   <div class="col-md-9 right_s">
     <ul class="right-form list-unstyled">
-      <form action="#" method="post">
+      <form action="/accounts/edit" method="post" enctype="multipart/form-data">
         <li class="nm"><h4>@{{user.username}}</h4></li>
         <li class="form-group fl">
           <input type="text" name="fullname" value="{{user.fullname}}" class="form-control">
@@ -62,13 +62,13 @@
           <input type="text" name="phone" value="{{user.phone}}" class="form-control">
         </li>
         <li class="form-group gender">
-          <select class="this-gender form-control" name="gender">
+          <select class="this-gender form-control" name="gender" value="{{user.gender}}">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </li>
         <li class="form-group phone">
-          <input type="file" name="profile" class="form-control">
+          <input type="file" name="profile" class="form-control fohg">
         </li>
         <li class="bgth">
           <button type="submit" class="btn btn-f">SUBMIT</button>
