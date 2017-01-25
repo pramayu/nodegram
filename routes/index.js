@@ -4,6 +4,7 @@ var multer  = require('multer');
 var fs = require('fs');
 var gm = require('gm').subClass({imageMagick: true});
 var User = require('../models/user');
+var Post = require('../models/post');
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -15,28 +16,16 @@ var storage = multer.diskStorage({
 });
 var upload = multer({ storage: storage }).single('profile');
 
-// function imgResize(req, width, height, pathUrl, callback){
-//   gm(req.file.path)
-//   .resize(width, height)
-//   .noProfile()
-//   .gravity('Center')
-//   .write(pathUrl + req.file.fieldname + '-' + Date.now() + '.png', function(err){
-//     if(!err){
-//       callback();
-//     }
-//   });
-// };
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/:username', isLoggedIn, function(req, res, next){
+router.get('/:username', function(req, res, next){
   var username = req.params.username;
   User.findOne({'username': username}, function(err, user){
     if(err){
-      res.redirect('/')
+      res.redirect('/');
     }
     res.render('./auth/profile', {user: user});
   });
@@ -93,7 +82,10 @@ router.post('/accounts/edit', upload, function(req, res, next){
         if(req.body.phone){
           user.phone = req.body.phone;
         }
-        user.profile = filename;
+        // tambahan
+        if(req.file){
+          user.profile = filename;
+        }
         user.save(function(err, updateUser){
           if(err){
             res.status(500).send();

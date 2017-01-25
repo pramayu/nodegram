@@ -11,6 +11,7 @@ var passport = require('passport');
 var flash  = require('connect-flash');
 var validator = require('express-validator');
 
+var post = require('./routes/posts');
 var auth = require('./routes/authentication');
 var index = require('./routes/index');
 
@@ -46,6 +47,7 @@ app.use(function(req, res, next){
   next();
 });
 
+app.use('/posts', post);
 app.use('/users', auth);
 app.use('/', index);
 

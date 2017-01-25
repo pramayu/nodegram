@@ -1,0 +1,43 @@
+<div class="col-md-4 profile_left">
+  <div class="img_pp">
+    {{#if user.profile}}
+      <img src="/uploads/profile/{{user.profile}}" alt="" />
+    {{else}}
+      <img src="/images/default/profile.png" width="152" alt="" />
+    {{/if}}
+  </div>
+</div>
+<div class="col-md-8 profile_right">
+  <div class="info_pp">
+    <div class="inlu">
+      <h2 class="name_">{{user.username}}</h2>
+      {{#if current_user }}
+      <a href="/accounts/edit" class="btn-follow prof">Profile</a>
+      {{else}}
+      <a href="#" class="btn-follow">Following</a>
+      <a href="#" class="btn-arrow"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+      {{/if}}
+      <a href="#" class="options dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">bg</a>
+      <ul class="dropdown-menu">
+        <li class="fou"><a href="#" data-toggle="modal" data-target="#upload">Upload</a></li>
+        <li><a href="/users/logout">Logout</a></li>
+      </ul>
+    </div>
+    <ul class="list-inline end-this-day">
+      <li><a><strong>122</strong> posts</a></li>
+      <li><a href="#"><strong>1,151</strong> Followers</a></li>
+      <li><a href="#"><strong>721</strong> Following</a></li>
+    </ul>
+    <div class="dsf">
+      <p class="desc">
+        <b><span class="fulname">{{user.fullname}}</span></b>
+        {{user.bio}}
+      </p>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="isi-photo">
+
+</div>
+{{> upload}}
